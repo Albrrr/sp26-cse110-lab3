@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="icon" href="sources/foodify-logo.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Meeting Minutes</title>
+  </head>
+  <body>
+    <header>
+      <div>Table of Contents</div>
+      <nav>
+        <!-- 
+        Navigate to important information:
+         - Agenda
+         - Unfinished business
+         - Form
+         -->
+         <ul>
+          <li><a href="#agenda">Agenda</a></li>
+          <li><a href="#unfinished">Unfinished Business</a></li>
+          <li><a href="#form">Feedback Form</a></li>
+         </ul>
+      </nav>
+    </header>
+    <main>
+      <h1>AI-Powered Restaurant Recommender First Check-In</h1>
+      <img 
+      src="https://raw.githubusercontent.com/Albrrr/Pages/main/Images/Screenshot%202026-04-02%20135007.png"
+      alt="website"
+      width="500"
+      />
+      <p>Date: 4/10/2026</p>
+      <p>Attendees:
+        <ul>
+          <li>Stephen Curry</li>
+          <li>Charles Leclerc</li>
+          <li>John Mayer</li>
+          <li>Steven Morrissey</li>
+        </ul>    
+      </p> 
+      <hr>
+      <section>
+        <h2 id="agenda">Agenda: Update Timeline for deliverables and assign tasks to each member</h2>
+        <h3 >Summary</h3>
+          <!--Summarize meeting content-->
+          <p>
+            <!--Use strong, i, em here-->
+            <span>The meeting disucssed whether the project was moving along smoothly and on time.</span>
+            <span>It was decided that the next pressing order of business would be to webscrape for data to populate the database.</span>
+            <span>It was decided that due to the overall speed efficiency, a RAG Framework would be used for the implementation.</span><br>
+            <video width="320" height="240" controls>
+              <source src="sources/IMG_1615 (3).mov">
+            </video><br>
+            Podcast of Meeting:<br>
+            <audio controls>
+              <source src="sources/FAH Echo Sound Effect.mp3">
+            </audio>
+
+            <div><em>See Comments & Concerns for issues.</em></div>
+          </p>
+        <h3>Comments & Concerns</h3>
+          <!--Comments from the meeting-->
+          <ul>
+            <li>
+              <span><b>Curry</b> brought up that the <strong>8 billion parameter</strong> model might lead to <em>slow</em> processing</span> 
+              <span>speed for prompts, and suggests we look into methods to speed up the overall runtime.</span>
+              <span>Perhaps some way to cut down time during tokenization, vectorization or similarity search.</span> 
+            </li>
+            <li>
+              <b>Mayer</b> suggests looking into <strong>vLLM hosting</strong>.
+            </li>
+            <li>
+              <b>Morrissey</b> suggests testing <strong>4-bit quantization</strong> for the <i>Llama-Instruct Model</i> to reduce parameter precision and thus <em>speed up</em> overall runtime.
+            </li>
+          </ul>
+        <h3>Timeline</h3>
+          <!--Ordered checklist of items to do-->
+          <ol>
+            <li><input type="checkbox"/> Decided on framework</li>
+            <li><input type="checkbox"/> Webscrape data to populate the database</li>
+            <li><input type="checkbox"/> Write a system a prompt</li>
+            <li><input type="checkbox"/> Implement a prototype for backend</li>
+            <li><input type="checkbox"/> Model Hosting</li>
+            <li><input type="checkbox"/> Create a basic frontend</li>
+            <li><input type="checkbox"/> Connect the frontend to the backend</li>
+          </ol>   
+        <h3>Assignments</h3>
+          <!--List the tasks of each member-->
+          <ul>
+            <li><b>Curry</b>: make use of existing APIs such as Yelp Fusion <br>or Firecrawl to scrape for menu data. </li>
+            <li><b>Leclerc</b>: Work with <i>Mayer</i> to implement RAG pipeline.</li>
+            <li><b>Mayer</b>: Work with <i>Leclerc</i> to implement RAG pipeline.</li>
+            <li><b>Morrissey</b>: Using <i>Llama-3-8B-Instruct</i>, try to run it with <strong>4-bit quantization</strong></li>
+          </ul>
+      </section> 
+      <hr>
+      <section>
+        <h2 id="unfinished">Unfinished Business: Consensus on RAG vs MCP Framework</h2>
+        <!--Content from a previous meeting that is being discussed now-->
+        <details>
+          <summary>RAG Framework</summary>
+          <!--Use strong, i, em here-->
+          <p>
+            <div><strong>Pros: </strong>Fast information retrieval, high control, lots of tools</div>
+            <div><strong>Cons: </strong>Static maintenance, prone to issues if you switch models</div>
+          </p>
+        </details>
+        <details>
+          <summary>MCP Framework</summary>
+          <!--Use strong, i, em here-->
+          <p>
+            <div><strong>Pros: </strong>Reduced overhead, can be used for different agents</div>
+            <div><strong>Cons: </strong>Slower, less tools</div>
+          </p>
+        </details>  
+      </section>
+      <hr>
+      <section>
+        <h2 id="form">Feedback Form</h2>
+        <form onsubmit="alert('Your feedback has been received!')">
+          <input type="date"><br>
+          <input type="text" placeholder="Enter Email Address"><br>
+          <input type="text" placeholder="Enter Name"><br>
+
+          <p><label for="role">Please choose your role:</label></p>
+          <input list="roles" name="role" id="role">
+          <datalist id="roles">
+            <option>Developer</option>
+            <option>Designer</option>
+            <option>Project Manager</option>
+            <option>Director</option>
+          </datalist>
+
+          <p><label for="attendance">Were you present during the meeting?</label></p>
+          <select name="attendance" id="attendance">
+            <option>Yes</option>
+            <option>No</option>
+          </select>
+          
+
+          <p>How was your experience?</p>
+          <input type="radio" id="good" name="experience" value="Good">
+          <label for="good">Good</label><br>
+          <input type="radio" id="ok" name="experience" value="Ok">
+          <label for="ok">Ok</label><br>
+          <input type="radio" id="bad" name="experience" value="Bad">
+          <label for="bad">Bad</label><br>
+
+          <p><label for="addComments">Additional Comments:</label></p>
+          <textarea id="addComments" name="addComments" rows="3" cols="40"></textarea><br>
+
+
+          <button>Submit</button>
+          
+        </form>
+      </section>
+      <hr>
+    </main>
+    <footer>
+      <p> Thank you for reading.</p>
+
+    </footer>
+    
+  </body>
+</html>
