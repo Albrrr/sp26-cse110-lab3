@@ -1,3 +1,10 @@
+/* 
+Defining colors to be used for the header  
+*/
+:root {
+  --header-color: #FDFBD4;
+}
+
 /* Color for title*/
 h1 {
     /*Makes use of hex code*/
@@ -16,6 +23,11 @@ h3 {
     color: hsl(200, 80%, 40%);
 }
 
+/* Color for the header with var and fallback */
+header {
+  background-color: var(--header-color, beige);
+}
+
 /* Color for important text */
 .highlight-red {
     /* Makes use of color name */
@@ -32,16 +44,4 @@ h3 {
 .highlight-mayer {
     /* Makes use of wider-gamut color-mix() */
     color: color-mix(in srgb, blue 60%, red 40%);
-}
-
-/* 
-Defining colors to be used for the header  
-*/
-:root {
-  --header-color: #FDFBD4;
-}
-
-/* Color for the header with var and fallback */
-header {
-  background-color: var(--header-color, beige);
 }
