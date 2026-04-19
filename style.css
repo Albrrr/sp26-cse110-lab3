@@ -19,7 +19,6 @@ and main font of the page
 /* type selector to apply font to entire page */
 body {
     font-family: var(--main-font);
-    font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
     font-size: 12pt;        /* Abs unit 1 */
@@ -117,7 +116,7 @@ main > img {
 
 /* Adjacent sibling combinator */
 h1 + img {
-    box-shadow: 0 4px, 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* General sibling combinator */
@@ -180,7 +179,7 @@ nav ul {
 }
 
 /* Responsive: ensure it works on different screen sizes */
-@media screen and (max-width){
+@media screen and (max-width: 600px){
     body{
         width: 100%;        /* relative unit */
         min-width: 0;
