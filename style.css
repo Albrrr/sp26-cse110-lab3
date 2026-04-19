@@ -156,11 +156,27 @@ b.highlight-curry {
     color: #FF2800;
 }
 
-/* has & nesting */
+/* has*/
 section:has(h2) {
     border-top: 1px solid #ccc;
     padding-top: 15px;
     padding-bottom: 15px;
+}
+
+/* & nesting */
+nav ul {
+    & li {
+        list-style: none;
+        & a {
+            /* Pseudo class usage */
+            &:hover {
+                color: var(--gsw-color);
+            }
+            &:active {
+                color: red;
+            }
+        }
+    }
 }
 
 /* Responsive: ensure it works on different screen sizes */
