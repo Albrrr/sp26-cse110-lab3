@@ -5,6 +5,7 @@ and main font of the page
 :root {
     --main-font: "Raleway", sans-serif;
     --header-color: #FDFBD4;
+    --gsw-color: color(display-p3 1 0.78 0.17);
     --title-weight: 800;
 }
 
@@ -14,6 +15,8 @@ body {
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
+
+    margin: auto;       /* auto margin usage */
 }
 
 /* Usage of selector list */
@@ -33,12 +36,18 @@ h1 {
 h2 {
     /* Makes use of rgb */
     color: rgb(104, 61, 0);
+    /*margin long*/
+    margin-top: 20px;       
+    margin-bottom: 20px;    
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 /* Color for sub topics */
 h3 {
     /* Makes use of hsl */
     color: hsl(200, 80%, 40%);
+    
 }
 
 /* Color for the header with var and fallback */
@@ -47,9 +56,23 @@ header {
 }
 
 /* Color to signify a specific speaker: Stephen Curry */
-.highlight-curry {
+/* Makes use of two selectors */
+b.highlight-curry {
     /* Makes use of wider-gamut color() */
-    color: color(display-p3 1 0.78 0.17);
+    color: var(--gsw-color);
+}
+
+/* Child combinator to stylize images in main */
+main > img {
+    margin: 20px auto;      /* margin shorthand */
+    
+    /* Box model: border stuff */
+    border-style: solid;
+    border-color: var(--gsw-color);
+    border-width: 4px;
+    border-radius: 10px;
+
+
 }
 
 /* Color to signify a specific speaker: John Mayer */
