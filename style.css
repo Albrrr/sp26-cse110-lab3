@@ -82,13 +82,20 @@ section ul, section ol {
     gap: 1.5em;         /* Relative unit 2*/
     justify-items: stretch;
     list-style-position: inside;
+    padding-left: 10px;
 }
 
-/* Color to signify a specific speaker: Stephen Curry */
-/* Makes use of two selectors */
-b.highlight-curry {
-    /* Makes use of wider-gamut color() */
-    color: var(--gsw-color);
+/* Styling for nav element */
+nav {
+    /* Position usage */
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+/* Descendant combinator usage */
+section p {
+    color: #333;
 }
 
 /* Child combinator to stylize images in main */
@@ -106,8 +113,36 @@ main > img {
     /* Abs unit usage */
     border-width: 4px;
     border-radius: 10px;
+}
 
+/* Adjacent sibling combinator */
+h1 + img {
+    box-shadow: 0 4px, 8px rgba(0, 0, 0, 0.1);
+}
 
+/* General sibling combinator */
+h2 ~ p {
+    font-weight: 300;
+}
+
+/* ID selector */
+#agenda {
+    /* Position usage */
+    position: relative;
+    left: 5px;     
+}
+
+/* Attribute selector */
+input[type="checkbox"]{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* Color to signify a specific speaker: Stephen Curry */
+/* Makes use of two selectors */
+b.highlight-curry {
+    /* Makes use of wider-gamut color() */
+    color: var(--gsw-color);
 }
 
 /* Color to signify a specific speaker: John Mayer */
@@ -121,6 +156,13 @@ main > img {
     color: #FF2800;
 }
 
+/* has & nesting */
+section:has(h2) {
+    border-top: 1px solid #ccc;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
 /* Responsive: ensure it works on different screen sizes */
 @media screen and (max-width){
     body{
@@ -131,6 +173,7 @@ main > img {
 
     section ul, ol {
         grid-template-columns: 1fr;
+        list-style-position: inside;
     }
 
     video{
