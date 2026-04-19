@@ -33,3 +33,16 @@ h3 {
     /* Makes use of wider-gamut color-mix() */
     color: color-mix(in srgb, blue 60%, red 40%);
 }
+
+/* 
+Defining colors to be used for the header  
+and a fallback to demonstrate usage
+*/
+:root {
+  --header-color: #FDFBD4;
+}
+
+/* Color for the header with var and fallback */
+header {
+  background-color: var(--brand-warriorsblue, beige);
+}
