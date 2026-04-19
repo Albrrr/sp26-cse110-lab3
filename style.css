@@ -1,8 +1,19 @@
 /* 
-Defining colors to be used for the header  
+Defining colors to be used for the header
+and main font of the page  
 */
 :root {
-  --header-color: #FDFBD4;
+    --main-font: "Raleway", sans-serif;
+    --header-color: #FDFBD4;
+    --title-weight: 800;
+}
+
+/* type selector to apply font to entire page */
+body {
+    font-family: var(--main-font);
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
 }
 
 /* Color for title*/
