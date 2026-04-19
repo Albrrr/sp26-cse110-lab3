@@ -1,0 +1,35 @@
+/* Color for title*/
+h1 {
+    /*Makes use of hex code*/
+    color: #0583eb; 
+}
+
+/* Color for the topics*/
+h2 {
+    /* Makes use of rgb */
+    color: rgb(104, 61, 0);
+}
+
+/* Color for sub topics */
+h3 {
+    /* Makes use of hsl */
+    color: hsl(200, 80%, 40%);
+}
+
+/* Color for important text */
+.highlight-red {
+    /* Makes use of color name */
+    color: red;
+}
+
+/* Color to signify a specific speaker: Stephen Curry */
+.highlight-curry {
+    /* Makes use of wider-gamut color() */
+    color: color(display-p3 1 0.78 0.17);
+}
+
+/* Color to signify a specific speaker: John Mayer */
+.highlight-mayer {
+    /* Makes use of wider-gamut color-mix() */
+    color: color-mix(in srgb, blue 60%, red 40%);
+}
