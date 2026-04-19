@@ -9,16 +9,24 @@ and main font of the page
     --title-weight: 800;
 }
 
+/* Universal selector usage */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 /* type selector to apply font to entire page */
 body {
     font-family: var(--main-font);
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
+    font-size: 12pt;        /* Abs unit 1 */
 
     /* Usage of sizing tools */
-    min-width: 320px;
-    width: 21cm;
+    min-width: 320px;       /* Abs unit 2 */
+    width: 21cm;            /* Abs unit 3*/
 
     margin: auto;       /* auto margin usage */
     background-color: #bfe4eb;
@@ -41,7 +49,7 @@ h1 {
 h2 {
     /* Makes use of rgb */
     color: rgb(104, 61, 0);
-    /*margin long*/
+    /*margin long + abs units*/
     margin-top: 20px;       
     margin-bottom: 20px;    
     margin-left: 20px;
@@ -63,7 +71,7 @@ header {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 1rem;
+    padding: 1rem;      /* Relative unit 1 */
 }
 
 /* Styling for all unordered/ordered lists */
@@ -71,7 +79,7 @@ section ul, section ol {
     /* Grid usage */
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 1.5em;
+    gap: 1.5em;         /* Relative unit 2*/
     justify-items: stretch;
     list-style-position: inside;
 }
@@ -90,11 +98,12 @@ main > img {
     
     /* Usage of sizing tools */
     height: auto;
-    max-width: 90%;
+    max-width: 90%;     /* Relative unit 3 */
 
     /* Box model: border stuff */
     border-style: solid;
     border-color: var(--gsw-color);
+    /* Abs unit usage */
     border-width: 4px;
     border-radius: 10px;
 
@@ -115,10 +124,15 @@ main > img {
 /* Responsive: ensure it works on different screen sizes */
 @media screen and (max-width){
     body{
-        width: 100%;
+        width: 100%;        /* relative unit */
         min-width: 0;
-        padding: 15px;      /* padding shorthand */
+        padding: 0 20px;      /* padding shorthand */
     }
+
+    section ul, ol {
+        grid-template-columns: 1fr;
+    }
+
     video{
         display: none;      /* second display feature */
     }
