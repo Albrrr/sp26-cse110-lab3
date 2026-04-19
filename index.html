@@ -39,7 +39,7 @@
       <p> Attendees: </p>
         <ul>
           <li><span class="highlight-curry">Stephen Curry</span></li>
-          <li>Charles Leclerc</li>
+          <li><span class="highlight-leclerc">Charles Leclerc</span></li>
           <li><span class="highlight-mayer">John Mayer</span></li>
           <li>Steven Morrissey</li>
         </ul>    
@@ -67,12 +67,12 @@
           <!--Comments from the meeting-->
           <ul>
             <li>
-              <span><b>Curry</b> brought up that the <strong>8 billion parameter</strong> model might lead to <em>slow</em> processing</span> 
-              <span>speed for prompts, and suggests we look into methods to speed up the overall runtime.</span>
-              <span>Perhaps some way to cut down time during tokenization, vectorization or similarity search.</span> 
+              <span class="highlight-curry"><b>Curry</b></span> brought up that the <strong>8 billion parameter</strong> model might lead to <em>slow</em> processing
+              speed for prompts, and suggests we look into methods to speed up the overall runtime.
+              Perhaps some way to cut down time during tokenization, vectorization or similarity search.
             </li>
             <li>
-              <b>Mayer</b> suggests looking into <strong>vLLM hosting</strong>.
+              <span class="highlight-mayer"><b>Mayer</b></span> suggests looking into <strong>vLLM hosting</strong>.
             </li>
             <li>
               <b>Morrissey</b> suggests testing <strong>4-bit quantization</strong> for the <i>Llama-Instruct Model</i> to reduce parameter precision and thus <em>speed up</em> overall runtime.
@@ -92,9 +92,9 @@
         <h3>Assignments</h3>
           <!--List the tasks of each member-->
           <ul>
-            <li><b>Curry</b>: make use of existing APIs such as Yelp Fusion <br>or Firecrawl to scrape for menu data. </li>
-            <li><b>Leclerc</b>: Work with <i>Mayer</i> to implement RAG pipeline.</li>
-            <li><b>Mayer</b>: Work with <i>Leclerc</i> to implement RAG pipeline.</li>
+            <li><span class="highlight-curry"><b>Curry</b></span>: make use of existing APIs such as Yelp Fusion <br>or Firecrawl to scrape for menu data. </li>
+            <li><span class="highlight-leclerc"><b>Leclerc</b></span>: Work with <span class="highlight-mayer"><i>Mayer</i></span> to implement RAG pipeline.</li>
+            <li><span class="highlight-mayer"><b>Mayer</b></span>: Work with <span class="highlight-leclerc"><i>Leclerc</i></span> to implement RAG pipeline.</li>
             <li><b>Morrissey</b>: Using <i>Llama-3-8B-Instruct</i>, try to run it with <strong>4-bit quantization</strong></li>
           </ul>
       </section> 

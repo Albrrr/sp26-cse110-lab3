@@ -16,6 +16,13 @@ body {
     font-style: normal;
 }
 
+/* Usage of selector list */
+h1, h2, h3 {
+    /* Usage of text styling */
+    text-decoration: none;
+    text-align: center;
+}
+
 /* Color for title*/
 h1 {
     /*Makes use of hex code*/
@@ -39,12 +46,6 @@ header {
   background-color: var(--header-color, beige);
 }
 
-/* Color for important text */
-.highlight-red {
-    /* Makes use of color name */
-    color: red;
-}
-
 /* Color to signify a specific speaker: Stephen Curry */
 .highlight-curry {
     /* Makes use of wider-gamut color() */
@@ -55,4 +56,9 @@ header {
 .highlight-mayer {
     /* Makes use of wider-gamut color-mix() */
     color: color-mix(in srgb, blue 60%, red 40%);
+}
+
+/* Color to signify a specific speaker: Charles Leclerc */
+.highlight-leclerc {
+    color: #FF2800;
 }
