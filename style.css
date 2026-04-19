@@ -4,7 +4,7 @@ and main font of the page
 */
 :root {
     --main-font: "Raleway", sans-serif;
-    --header-color: #916f4a;
+    --header-color: #EEF0E6;
     --gsw-color: color(display-p3 1 0.78 0.17);
     --title-weight: 800;
 }
@@ -55,9 +55,25 @@ h3 {
     
 }
 
-/* Color for the header with var and fallback */
+/* Header styling */
 header {
-  background-color: var(--header-color, beige);
+    /* Color for the header with var and fallback */
+    background-color: var(--header-color, beige);
+    /* Flexbox usage */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem;
+}
+
+/* Styling for all unordered/ordered lists */
+section ul, section ol {
+    /* Grid usage */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5em;
+    justify-items: stretch;
+    list-style-position: inside;
 }
 
 /* Color to signify a specific speaker: Stephen Curry */
