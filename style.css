@@ -64,6 +64,7 @@ b.highlight-curry {
 
 /* Child combinator to stylize images in main */
 main > img {
+    display: block;         /* usage of display to render image in the center*/
     margin: 20px auto;      /* margin shorthand */
     
     /* Box model: border stuff */
