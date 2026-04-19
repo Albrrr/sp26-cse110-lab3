@@ -36,7 +36,6 @@ h3 {
 
 /* 
 Defining colors to be used for the header  
-and a fallback to demonstrate usage
 */
 :root {
   --header-color: #FDFBD4;
@@ -44,5 +43,5 @@ and a fallback to demonstrate usage
 
 /* Color for the header with var and fallback */
 header {
-  background-color: var(--brand-warriorsblue, beige);
+  background-color: var(--header-color, beige);
 }
