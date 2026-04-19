@@ -4,7 +4,7 @@ and main font of the page
 */
 :root {
     --main-font: "Raleway", sans-serif;
-    --header-color: #FDFBD4;
+    --header-color: #916f4a;
     --gsw-color: color(display-p3 1 0.78 0.17);
     --title-weight: 800;
 }
@@ -16,7 +16,12 @@ body {
     font-weight: 400;
     font-style: normal;
 
+    /* Usage of sizing tools */
+    min-width: 320px;
+    width: 21cm;
+
     margin: auto;       /* auto margin usage */
+    background-color: #bfe4eb;
 }
 
 /* Usage of selector list */
@@ -67,6 +72,10 @@ main > img {
     display: block;         /* usage of display to render image in the center*/
     margin: 20px auto;      /* margin shorthand */
     
+    /* Usage of sizing tools */
+    height: auto;
+    max-width: 90%;
+
     /* Box model: border stuff */
     border-style: solid;
     border-color: var(--gsw-color);
@@ -91,7 +100,8 @@ main > img {
 @media screen and (max-width){
     body{
         width: 100%;
-        padding: 10px;      /* padding shorthand */
+        min-width: 0;
+        padding: 15px;      /* padding shorthand */
     }
     video{
         display: none;      /* second display feature */
