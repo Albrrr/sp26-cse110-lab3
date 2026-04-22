@@ -82,6 +82,30 @@ section ul, section ol {
     justify-items: stretch;
     list-style-position: inside;
     padding-left: 10px;
+    padding-right: 10px;
+}
+
+/*Styling for button*/
+button {
+    /* border shorthand   */
+    border: 2px solid white;
+
+    /* padding longhand   */
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-rght: 20px;
+    padding-left: 20px;
+
+    display: inline-flex;    
+    justify-content: center; /* Centers text horizontally */
+    align-items: center;
+
+    background-color: white; 
+    color: black;
+    cursor: pointer;
+    font-family: var(--main-font); 
+    border-radius: 8px;           
+    min-width: 120px;
 }
 
 /* Styling for nav element */
